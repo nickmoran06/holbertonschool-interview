@@ -15,10 +15,11 @@ def canUnlockAll(boxes):
 
     for x in unlock_box:
         for y in boxes[x]:
-            if y in unlock_box:
-                pass
-            else:
-                unlock_box.append(y)
+            if y < len(boxes):
+                if y in unlock_box:
+                    pass
+                else:
+                    unlock_box.append(y)
 
     if len(unlock_box) == len(boxes):
         return True
